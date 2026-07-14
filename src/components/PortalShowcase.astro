@@ -1,4 +1,5 @@
 ---
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 <section class="portal-showcase" id="features">
 	<div class="container">
@@ -27,7 +28,7 @@
 				<div class="showcase-panel active" id="admin-portal">
 					<div class="showcase-layout">
 						<div class="showcase-image-wrapper glass-card">
-							<img src={`${import.meta.env.BASE_URL}logiplat_dashboard.png`} alt="Musubi Admin Control Tower Dashboard" class="showcase-img" />
+							<img src={`${base}logiplat_dashboard.png`} alt="Musubi Admin Control Tower Dashboard" class="showcase-img" />
 							<div class="glow-effect-box"></div>
 						</div>
 						<div class="showcase-details">
@@ -56,7 +57,7 @@
 				<div class="showcase-panel" id="supplier-portal">
 					<div class="showcase-layout">
 						<div class="showcase-image-wrapper glass-card">
-							<img src={`${import.meta.env.BASE_URL}supplier_portal.png`} alt="Musubi Japanese Supplier Portal" class="showcase-img" />
+							<img src={`${base}supplier_portal.png`} alt="Musubi Japanese Supplier Portal" class="showcase-img" />
 							<div class="glow-effect-box"></div>
 						</div>
 						<div class="showcase-details">
