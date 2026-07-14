@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import PortalShowcase from '../components/PortalShowcase.astro';
+import BiddingSimulator from '../components/BiddingSimulator.astro';
+import EcosystemTabs from '../components/EcosystemTabs.astro';
+import FactoringCalculator from '../components/FactoringCalculator.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<Layout>
+	<Navbar />
+	<main>
+		<Hero />
+		<PortalShowcase />
+		<BiddingSimulator />
+		<EcosystemTabs />
+		<FactoringCalculator />
+		<ContactForm />
+	</main>
+	
+	<footer class="footer">
+		<div class="container footer-content">
+			<div class="footer-brand">
+				<span>Musu</span><span class="logo-accent">bi</span>
+				<p>The Asset-Light Industrial Logistics Orchestrator.</p>
+			</div>
+			<div class="footer-links">
+				<a href="#features">Features</a>
+				<a href="#bidding-sim">Bidding</a>
+				<a href="#partners">Ecosystem</a>
+				<a href="#factoring-calc">FinTech</a>
+			</div>
+			<div class="footer-copy">
+				&copy; {new Date().getFullYear()} Musubi Inc. All rights reserved.
+			</div>
+		</div>
+	</footer>
+</Layout>
+
+<style>
+	main {
+		flex-grow: 1;
+	}
+
+	.footer {
+		background-color: var(--bg-secondary);
+		border-top: 1px solid var(--card-border);
+		padding: 40px 0;
+		color: var(--text-muted);
+		font-size: 0.88rem;
+	}
+
+	.footer-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		text-align: center;
+	}
+
+	.footer-brand {
+		font-family: var(--font-heading);
+		font-size: 1.4rem;
+		font-weight: 800;
+		color: var(--text-primary);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4px;
+	}
+
+	.footer-brand p {
+		font-size: 0.8rem;
+		color: var(--text-muted);
+		font-family: var(--font-body);
+		font-weight: 400;
+	}
+
+	.logo-accent {
+		background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-blue) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.footer-links {
+		display: flex;
+		gap: 24px;
+	}
+
+	.footer-links a {
+		color: var(--text-secondary);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.footer-links a:hover {
+		color: var(--text-primary);
+	}
+
+	.footer-copy {
+		font-size: 0.78rem;
+		margin-top: 10px;
+	}
+</style>

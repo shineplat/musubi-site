@@ -1,0 +1,500 @@
+---
+---
+<section class="contact-section" id="demo">
+	<div class="container">
+		<div class="section-title-container">
+			<span class="section-subtitle">Request Access & Info</span>
+			<h2 class="section-title">Join the Musubi Network</h2>
+			<p class="section-desc">
+				Whether you are an exporter seeking capacity, a logistics provider offering space, or an investor tracking high-margin SaaS flywheels, we want to hear from you.
+			</p>
+		</div>
+		
+		<div class="contact-grid">
+			<!-- Contact Pitch Card -->
+			<div class="pitch-card-container">
+				<div class="glass-card info-pitch-card">
+					<h3>Next Steps for Growth</h3>
+					<p class="pitch-card-lead">We are currently onboarding tier-1 suppliers in Japan and expanding our Carson warehouse corridor.</p>
+					
+					<div class="info-list">
+						<div class="info-item">
+							<span class="info-icon">📍</span>
+							<div class="info-text">
+								<strong>USA Office</strong>
+								<span>Carson Corridor Logistics Hub, Carson, CA</span>
+							</div>
+						</div>
+						<div class="info-item">
+							<span class="info-icon">📍</span>
+							<div class="info-text">
+								<strong>Japan Office</strong>
+								<span>Naka-ku, Nagoya, Aichi Prefecture</span>
+							</div>
+						</div>
+						<div class="info-item">
+							<span class="info-icon">✉</span>
+							<div class="info-text">
+								<strong>General Inquiries</strong>
+								<span>operations@musubi.com</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="pitch-tag-glow">
+						<span>⚡ Seed Round v3 Ongoing • Pitch Deck Available on Request</span>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Contact Form Card -->
+			<div class="form-card-container">
+				<div class="glass-card form-card">
+					<!-- Form Tab Swappers -->
+					<div class="form-tabs">
+						<button class="form-tab-btn active" data-form-role="exporter">Manufacturer</button>
+						<button class="form-tab-btn" data-form-role="partner">Logistics Partner</button>
+						<button class="form-tab-btn" data-form-role="investor">Investor</button>
+					</div>
+					
+					<!-- Form Fields Box -->
+					<form id="contact-form" class="form-body">
+						<input type="hidden" id="form-role-input" value="exporter" />
+						
+						<div class="form-group-row">
+							<div class="form-group">
+								<label for="company-name" id="label-company">Company Name</label>
+								<input type="text" id="company-name" placeholder="Nakamura Seiki Ltd." required />
+							</div>
+							<div class="form-group">
+								<label for="contact-name">Contact Name</label>
+								<input type="text" id="contact-name" placeholder="Taro Nakamura" required />
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="contact-email">Email Address</label>
+							<input type="email" id="contact-email" placeholder="contact@company.com" required />
+						</div>
+						
+						<!-- Dynamic Field Block 1 -->
+						<div class="form-group" id="dynamic-field-container">
+							<label for="dynamic-select" id="label-dynamic">Estimated Monthly Volume</label>
+							<select id="dynamic-select">
+								<option value="low">Under 10 containers / month</option>
+								<option value="medium">10 to 50 containers / month</option>
+								<option value="high">50+ containers / month</option>
+							</select>
+						</div>
+						
+						<div class="form-group">
+							<label for="message">Message / Specific Requirements</label>
+							<textarea id="message" rows="4" placeholder="How can we help optimize your supply chain corridor?" required></textarea>
+						</div>
+						
+						<button type="submit" class="btn btn-primary form-submit-btn">Send Inquiry</button>
+					</form>
+					
+					<!-- Success Message Panel -->
+					<div class="success-panel hidden" id="success-panel">
+						<div class="success-icon">✓</div>
+						<h3>Inquiry Submitted Successfully</h3>
+						<p>Thank you for reaching out. A Musubi representative will contact you within 24 hours to discuss next steps.</p>
+						<button class="btn btn-secondary btn-sm" id="reset-form-btn">Submit Another Inquiry</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.contact-section {
+		background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+		position: relative;
+	}
+
+	.contact-grid {
+		display: grid;
+		grid-template-columns: 0.8fr 1.2fr;
+		gap: 40px;
+		align-items: stretch;
+	}
+
+	.info-pitch-card {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		border-left: 4px solid var(--accent-secondary);
+	}
+
+	.info-pitch-card h3 {
+		font-size: 1.5rem;
+		margin-bottom: 12px;
+		color: var(--text-primary);
+	}
+
+	.pitch-card-lead {
+		font-size: 0.98rem;
+		color: var(--text-secondary);
+		margin-bottom: 32px;
+		line-height: 1.5;
+	}
+
+	.info-list {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.info-item {
+		display: flex;
+		gap: 16px;
+		align-items: flex-start;
+	}
+
+	.info-icon {
+		width: 32px;
+		height: 32px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--card-border);
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.95rem;
+		flex-shrink: 0;
+	}
+
+	.info-text {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		font-size: 0.9rem;
+	}
+
+	.info-text strong {
+		color: var(--text-primary);
+		font-weight: 600;
+	}
+
+	.info-text span {
+		color: var(--text-secondary);
+	}
+
+	.pitch-tag-glow {
+		margin-top: auto;
+		background: rgba(139, 92, 246, 0.05);
+		border: 1px solid rgba(139, 92, 246, 0.15);
+		padding: 12px;
+		border-radius: 8px;
+		text-align: center;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--accent-secondary);
+	}
+
+	/* Form Card styling */
+	.form-card {
+		padding: 30px;
+		position: relative;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.form-tabs {
+		display: flex;
+		border-bottom: 1px solid var(--card-border);
+		margin-bottom: 24px;
+		gap: 12px;
+	}
+
+	.form-tab-btn {
+		background: transparent;
+		border: none;
+		color: var(--text-secondary);
+		font-family: var(--font-heading);
+		font-size: 0.95rem;
+		font-weight: 600;
+		padding: 10px 4px;
+		cursor: pointer;
+		position: relative;
+		transition: color 0.2s ease;
+	}
+
+	.form-tab-btn:hover {
+		color: var(--text-primary);
+	}
+
+	.form-tab-btn.active {
+		color: var(--accent-primary);
+	}
+
+	.form-tab-btn.active::after {
+		content: '';
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: var(--accent-primary);
+		box-shadow: 0 2px 8px var(--accent-primary);
+	}
+
+	/* Form elements */
+	.form-body {
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+		flex-grow: 1;
+	}
+
+	.form-body.hidden {
+		display: none;
+	}
+
+	.form-group-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 16px;
+	}
+
+	.form-group {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+	}
+
+	.form-group label {
+		font-size: 0.82rem;
+		color: var(--text-secondary);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+	}
+
+	.form-group input, 
+	.form-group select, 
+	.form-group textarea {
+		background: rgba(8, 11, 17, 0.5);
+		border: 1px solid var(--card-border);
+		border-radius: 8px;
+		padding: 12px;
+		color: var(--text-primary);
+		font-family: var(--font-body);
+		font-size: 0.9rem;
+		outline: none;
+		transition: all 0.2s ease;
+	}
+
+	.form-group input:focus, 
+	.form-group select:focus, 
+	.form-group textarea:focus {
+		border-color: var(--accent-primary);
+		box-shadow: 0 0 10px rgba(0, 242, 254, 0.15);
+		background: rgba(8, 11, 17, 0.8);
+	}
+
+	.form-submit-btn {
+		margin-top: 10px;
+		width: 100%;
+		padding: 14px;
+	}
+
+	/* Success Panel */
+	.success-panel {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		flex-grow: 1;
+		gap: 16px;
+		padding: 30px 10px;
+		animation: expand-result 0.4s ease-out forwards;
+	}
+
+	.success-panel.hidden {
+		display: none;
+	}
+
+	.success-icon {
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		background: var(--accent-success);
+		color: #080b11;
+		font-size: 1.5rem;
+		font-weight: 800;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+	}
+
+	.success-panel h3 {
+		font-size: 1.4rem;
+		color: var(--text-primary);
+	}
+
+	.success-panel p {
+		font-size: 0.92rem;
+		color: var(--text-secondary);
+		max-width: 320px;
+		margin-bottom: 8px;
+	}
+
+	@media (max-width: 991px) {
+		.contact-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.form-group-row {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
+
+<script>
+	class ContactForm {
+		container: HTMLElement | null = null;
+		tabButtons: NodeListOf<HTMLButtonElement> | null = null;
+		form: HTMLFormElement | null = null;
+		roleInput: HTMLInputElement | null = null;
+		successPanel: HTMLElement | null = null;
+		resetBtn: HTMLElement | null = null;
+		
+		// Dynamic labels & inputs
+		labelCompany: HTMLElement | null = null;
+		companyInput: HTMLInputElement | null = null;
+		contactInput: HTMLInputElement | null = null;
+		messageInput: HTMLTextAreaElement | null = null;
+		labelDynamic: HTMLElement | null = null;
+		dynamicSelect: HTMLSelectElement | null = null;
+		dynamicFieldContainer: HTMLElement | null = null;
+
+		// Form role settings config
+		roleConfig = {
+			exporter: {
+				labelCompany: "Company Name",
+				companyPlaceholder: "Nakamura Seiki Ltd.",
+				contactPlaceholder: "Taro Nakamura",
+				msgPlaceholder: "How can we help optimize your supply chain corridor?",
+				dynamicLabel: "Estimated Monthly Volume",
+				dynamicOptions: [
+					{ val: "low", text: "Under 10 containers / month" },
+					{ val: "medium", text: "10 to 50 containers / month" },
+					{ val: "high", text: "50+ containers / month" }
+				]
+			},
+			partner: {
+				labelCompany: "Organization Name",
+				companyPlaceholder: "Pacific Logistics Hub Inc.",
+				contactPlaceholder: "Sarah Jenkins",
+				msgPlaceholder: "Provide details on your facility (location, size) or fleet size...",
+				dynamicLabel: "Ecosystem Partner Type",
+				dynamicOptions: [
+					{ val: "warehouse", text: "3PL Warehouse Operator" },
+					{ val: "carrier-drayage", text: "Bonded Drayage Carrier" },
+					{ val: "carrier-ltl", text: "FTL/LTL Carrier" }
+				]
+			},
+			investor: {
+				labelCompany: "Investment Group / Firm",
+				companyPlaceholder: "Apex Ventures",
+				contactPlaceholder: "Arthur Dent",
+				msgPlaceholder: "How can we support your due diligence? Request Pitch Deck, Financial Models...",
+				dynamicLabel: "Inquiry Area",
+				dynamicOptions: [
+					{ val: "pitch", text: "Request Seed Pitch Deck" },
+					{ val: "financials", text: "Request Financial Model" },
+					{ val: "call", text: "Schedule Introductory Call" }
+				]
+			}
+		};
+
+		constructor() {
+			this.container = document.querySelector('.contact-section');
+			if (!this.container) return;
+
+			this.tabButtons = this.container.querySelectorAll('.form-tab-btn');
+			this.form = document.getElementById('contact-form') as HTMLFormElement;
+			this.roleInput = document.getElementById('form-role-input') as HTMLInputElement;
+			this.successPanel = document.getElementById('success-panel');
+			this.resetBtn = document.getElementById('reset-form-btn');
+			
+			this.labelCompany = document.getElementById('label-company');
+			this.companyInput = document.getElementById('company-name') as HTMLInputElement;
+			this.contactInput = document.getElementById('contact-name') as HTMLInputElement;
+			this.messageInput = document.getElementById('message') as HTMLTextAreaElement;
+			
+			this.labelDynamic = document.getElementById('label-dynamic');
+			this.dynamicSelect = document.getElementById('dynamic-select') as HTMLSelectElement;
+			this.dynamicFieldContainer = document.getElementById('dynamic-field-container');
+
+			this.tabButtons.forEach(btn => {
+				btn.addEventListener('click', () => {
+					const role = btn.getAttribute('data-form-role') as 'exporter' | 'partner' | 'investor';
+					if (role) this.switchFormRole(role, btn);
+				});
+			});
+
+			this.form?.addEventListener('submit', (e) => {
+				e.preventDefault();
+				this.handleSubmit();
+			});
+
+			this.resetBtn?.addEventListener('click', () => this.resetForm());
+		}
+
+		switchFormRole(role: 'exporter' | 'partner' | 'investor', clickedBtn: HTMLButtonElement) {
+			this.tabButtons?.forEach(btn => btn.classList.remove('active'));
+			clickedBtn.classList.add('active');
+
+			if (this.roleInput) this.roleInput.value = role;
+
+			const config = this.roleConfig[role];
+			if (!config) return;
+
+			// Update Labels and Placeholders
+			if (this.labelCompany) this.labelCompany.textContent = config.labelCompany;
+			if (this.companyInput) this.companyInput.placeholder = config.companyPlaceholder;
+			if (this.contactInput) this.contactInput.placeholder = config.contactPlaceholder;
+			if (this.messageInput) this.messageInput.placeholder = config.msgPlaceholder;
+
+			// Update Dynamic Dropdown Options
+			if (this.labelDynamic) this.labelDynamic.textContent = config.dynamicLabel;
+			if (this.dynamicSelect) {
+				this.dynamicSelect.innerHTML = '';
+				config.dynamicOptions.forEach(opt => {
+					const optionEl = document.createElement('option');
+					optionEl.value = opt.val;
+					optionEl.textContent = opt.text;
+					this.dynamicSelect?.appendChild(optionEl);
+				});
+			}
+		}
+
+		handleSubmit() {
+			// Simulate API request send
+			if (this.form) this.form.classList.add('hidden');
+			if (this.successPanel) this.successPanel.classList.remove('hidden');
+		}
+
+		resetForm() {
+			if (this.form) {
+				this.form.reset();
+				this.form.classList.remove('hidden');
+			}
+			if (this.successPanel) this.successPanel.classList.add('hidden');
+		}
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		new ContactForm();
+	});
+</script>

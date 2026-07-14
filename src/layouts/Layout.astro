@@ -1,0 +1,265 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "Musubi — Asset-Light Industrial Logistics Orchestrator", 
+	description = "Connecting Japanese manufacturers with a bid-driven network of US warehouses, carriers, and distributors. Spot procurement, compliance-gated bidding, and custody ledgers."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--bg-primary: #080b11;
+		--bg-secondary: #0e1320;
+		--bg-tertiary: #151c2e;
+		--card-bg: rgba(14, 19, 32, 0.7);
+		--card-border: rgba(255, 255, 255, 0.08);
+		--card-border-glow: rgba(0, 242, 254, 0.2);
+		
+		--text-primary: #f3f4f6;
+		--text-secondary: #9ca3af;
+		--text-muted: #6b7280;
+		
+		--accent-primary: #00f2fe;
+		--accent-primary-rgb: 0, 242, 254;
+		--accent-secondary: #8b5cf6;
+		--accent-secondary-rgb: 139, 92, 246;
+		--accent-blue: #3b82f6;
+		--accent-success: #10b981;
+		--accent-warning: #f59e0b;
+		--accent-danger: #ef4444;
+		
+		--glow-primary: 0 0 30px rgba(0, 242, 254, 0.15);
+		--glow-secondary: 0 0 30px rgba(139, 92, 246, 0.15);
+		
+		--font-heading: 'Outfit', sans-serif;
+		--font-body: 'Inter', sans-serif;
+	}
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	html {
+		scroll-behavior: smooth;
+		background-color: var(--bg-primary);
+		color: var(--text-primary);
+		font-family: var(--font-body);
+		overflow-x: hidden;
+	}
+
+	body {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		overflow-x: hidden;
+		position: relative;
+	}
+
+	/* Ambient Background Blobs */
+	body::before,
+	body::after {
+		content: '';
+		position: absolute;
+		width: 40vw;
+		height: 40vw;
+		border-radius: 50%;
+		filter: blur(120px);
+		z-index: -1;
+		pointer-events: none;
+		opacity: 0.12;
+	}
+	
+	body::before {
+		top: -10vw;
+		right: -10vw;
+		background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
+		animation: float-blob 25s infinite alternate ease-in-out;
+	}
+
+	body::after {
+		bottom: 10vw;
+		left: -10vw;
+		background: radial-gradient(circle, var(--accent-secondary) 0%, transparent 70%);
+		animation: float-blob-reverse 30s infinite alternate ease-in-out;
+	}
+
+	@keyframes float-blob {
+		0% { transform: translate(0, 0) scale(1); }
+		100% { transform: translate(-50px, 80px) scale(1.1); }
+	}
+
+	@keyframes float-blob-reverse {
+		0% { transform: translate(0, 0) scale(1.1); }
+		100% { transform: translate(60px, -50px) scale(0.9); }
+	}
+
+	/* Scrollbars */
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	::-webkit-scrollbar-track {
+		background: var(--bg-primary);
+	}
+	::-webkit-scrollbar-thumb {
+		background: var(--bg-tertiary);
+		border-radius: 4px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: #1f2a45;
+	}
+
+	/* Typography Utility Styles */
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--font-heading);
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		line-height: 1.2;
+	}
+
+	p {
+		line-height: 1.6;
+		color: var(--text-secondary);
+	}
+
+	/* Glowing buttons & glass panels */
+	.glass-card {
+		background: var(--card-bg);
+		border: 1px solid var(--card-border);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border-radius: 16px;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.glass-card:hover {
+		border-color: var(--card-border-glow);
+		box-shadow: var(--glow-primary);
+		transform: translateY(-2px);
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 12px 24px;
+		border-radius: 9999px;
+		font-family: var(--font-heading);
+		font-weight: 600;
+		font-size: 0.95rem;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+		border: none;
+		gap: 8px;
+	}
+
+	.btn-primary {
+		background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-blue) 100%);
+		color: #04080f;
+		box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+	}
+
+	.btn-primary:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(0, 242, 254, 0.5), var(--glow-primary);
+	}
+
+	.btn-secondary {
+		background: rgba(255, 255, 255, 0.05);
+		color: var(--text-primary);
+		border: 1px solid var(--card-border);
+	}
+
+	.btn-secondary:hover {
+		background: rgba(255, 255, 255, 0.1);
+		border-color: rgba(255, 255, 255, 0.2);
+		transform: translateY(-2px);
+	}
+
+	.text-gradient-cyan-purple {
+		background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.section-title-container {
+		text-align: center;
+		margin-bottom: 3.5rem;
+	}
+
+	.section-subtitle {
+		text-transform: uppercase;
+		font-size: 0.85rem;
+		font-weight: 700;
+		letter-spacing: 0.15em;
+		color: var(--accent-primary);
+		margin-bottom: 0.5rem;
+		display: block;
+	}
+
+	.section-title {
+		font-size: 2.25rem;
+		margin-bottom: 1rem;
+		color: var(--text-primary);
+	}
+
+	.section-desc {
+		max-width: 600px;
+		margin: 0 auto;
+		font-size: 1.05rem;
+		color: var(--text-secondary);
+	}
+
+	.container {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 24px;
+	}
+
+	section {
+		padding: 100px 0;
+	}
+
+	/* Responsive layouts */
+	@media (max-width: 768px) {
+		section {
+			padding: 60px 0;
+		}
+		.section-title {
+			font-size: 1.8rem;
+		}
+	}
+</style>

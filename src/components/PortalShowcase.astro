@@ -1,0 +1,296 @@
+---
+---
+<section class="portal-showcase" id="features">
+	<div class="container">
+		<div class="section-title-container">
+			<span class="section-subtitle">Platform Screenshots</span>
+			<h2 class="section-title">The Musubi Interface</h2>
+			<p class="section-desc">
+				Tailored portals for administrators, exporters, carriers, and warehouses to sync their operations in real-time.
+			</p>
+		</div>
+		
+		<div class="showcase-tabs-container">
+			<div class="showcase-nav">
+				<button class="showcase-nav-btn active" data-showcase="admin-portal">
+					<strong>Control Tower</strong>
+					<span>Platform Admin Portal</span>
+				</button>
+				<button class="showcase-nav-btn" data-showcase="supplier-portal">
+					<strong>Supplier Portal</strong>
+					<span>Japanese Exporter View</span>
+				</button>
+			</div>
+			
+			<div class="showcase-panels">
+				<!-- Panel 1: Admin Portal -->
+				<div class="showcase-panel active" id="admin-portal">
+					<div class="showcase-layout">
+						<div class="showcase-image-wrapper glass-card">
+							<img src="/logiplat_dashboard.png" alt="Musubi Admin Control Tower Dashboard" class="showcase-img" />
+							<div class="glow-effect-box"></div>
+						</div>
+						<div class="showcase-details">
+							<h3>Admin Control Tower</h3>
+							<p>The centralized orchestration deck used by administrators to monitor international logistics legs, manage compliance gates, and resolve disputes.</p>
+							
+							<div class="showcase-feature-list">
+								<div class="showcase-feat-item">
+									<strong>Route Monitor Dashboard</strong>
+									<span>Track shipments along the Japan-US corridor with real-time ETA calculations.</span>
+								</div>
+								<div class="showcase-feat-item">
+									<strong>Demurrage Threat Matrix</strong>
+									<span>Flashing warnings prioritize shipments within 36 hours of their Last Free Day to avoid port penalties.</span>
+								</div>
+								<div class="showcase-feat-item">
+									<strong>Dispute Claims Resolution</strong>
+									<span>Freeze carrier payouts and coordinate cargo rerouting when warehouses reject deliveries.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Panel 2: Supplier Portal -->
+				<div class="showcase-panel" id="supplier-portal">
+					<div class="showcase-layout">
+						<div class="showcase-image-wrapper glass-card">
+							<img src="/supplier_portal.png" alt="Musubi Japanese Supplier Portal" class="showcase-img" />
+							<div class="glow-effect-box"></div>
+						</div>
+						<div class="showcase-details">
+							<h3>Japanese Supplier Portal</h3>
+							<p>A bilingual entry-point enabling Japanese industrial goods exporters to catalog products, verify EPA/TSCA custom declarations, and request factoring.</p>
+							
+							<div class="showcase-feature-list">
+								<div class="showcase-feat-item">
+									<strong>Bilingual Cataloging</strong>
+									<span>Dual JP/EN entry for mechanical designs, dimensions, serialization, and HTS classifications.</span>
+								</div>
+								<div class="showcase-feat-item">
+									<strong>Compliance Gating</strong>
+									<span>Clear checklist updates for EPA toxic control disclosures and Importer Security Filings (10+2).</span>
+								</div>
+								<div class="showcase-feat-item">
+									<strong>1-Click Factoring Request</strong>
+									<span>Optimize cash-flow by requesting instant payment factoring for Net 30/60/90 invoices.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.portal-showcase {
+		background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+		border-bottom: 1px solid var(--card-border);
+	}
+
+	.showcase-tabs-container {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.showcase-nav {
+		display: flex;
+		gap: 16px;
+		justify-content: center;
+	}
+
+	.showcase-nav-btn {
+		background: rgba(255, 255, 255, 0.01);
+		border: 1px solid var(--card-border);
+		border-radius: 12px;
+		padding: 16px 24px;
+		text-align: left;
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		min-width: 200px;
+	}
+
+	.showcase-nav-btn strong {
+		font-family: var(--font-heading);
+		font-size: 1.05rem;
+		color: var(--text-secondary);
+	}
+
+	.showcase-nav-btn span {
+		font-size: 0.78rem;
+		color: var(--text-muted);
+	}
+
+	.showcase-nav-btn:hover {
+		background: rgba(255, 255, 255, 0.03);
+		border-color: rgba(255, 255, 255, 0.15);
+	}
+
+	.showcase-nav-btn.active {
+		border-color: var(--accent-primary);
+		background: rgba(0, 242, 254, 0.02);
+		box-shadow: 0 0 15px rgba(0, 242, 254, 0.05);
+	}
+
+	.showcase-nav-btn.active strong {
+		color: var(--text-primary);
+	}
+
+	.showcase-nav-btn.active span {
+		color: var(--accent-primary);
+	}
+
+	/* Showcase Panels */
+	.showcase-panel {
+		display: none;
+		animation: fade-in-panel 0.4s ease-out forwards;
+	}
+
+	.showcase-panel.active {
+		display: block;
+	}
+
+	.showcase-layout {
+		display: grid;
+		grid-template-columns: 1.25fr 0.75fr;
+		gap: 50px;
+		align-items: center;
+	}
+
+	.showcase-image-wrapper {
+		border-radius: 16px;
+		overflow: hidden;
+		position: relative;
+		padding: 4px;
+		background: rgba(255, 255, 255, 0.01);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	}
+
+	.showcase-img {
+		width: 100%;
+		height: auto;
+		border-radius: 12px;
+		display: block;
+		filter: brightness(0.9);
+		transition: filter 0.3s ease;
+	}
+
+	.showcase-image-wrapper:hover .showcase-img {
+		filter: brightness(1);
+	}
+
+	.glow-effect-box {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		box-shadow: inset 0 0 20px rgba(0, 242, 254, 0.1);
+		pointer-events: none;
+		border-radius: 12px;
+	}
+
+	.showcase-details h3 {
+		font-size: 1.8rem;
+		margin-bottom: 12px;
+		color: var(--text-primary);
+	}
+
+	.showcase-details p {
+		font-size: 0.98rem;
+		color: var(--text-secondary);
+		margin-bottom: 30px;
+		line-height: 1.6;
+	}
+
+	.showcase-feature-list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		border-top: 1px solid var(--card-border);
+		padding-top: 24px;
+	}
+
+	.showcase-feat-item {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	.showcase-feat-item strong {
+		font-size: 0.92rem;
+		color: var(--text-primary);
+	}
+
+	.showcase-feat-item span {
+		font-size: 0.85rem;
+		color: var(--text-secondary);
+		line-height: 1.4;
+	}
+
+	@media (max-width: 991px) {
+		.showcase-layout {
+			grid-template-columns: 1fr;
+			gap: 30px;
+		}
+
+		.showcase-details {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.showcase-nav {
+			flex-direction: column;
+			align-items: stretch;
+		}
+		
+		.showcase-nav-btn {
+			min-width: unset;
+		}
+	}
+</style>
+
+<script>
+	class PortalShowcase {
+		container: HTMLElement | null = null;
+		buttons: NodeListOf<HTMLButtonElement> | null = null;
+		panels: NodeListOf<HTMLElement> | null = null;
+
+		constructor() {
+			this.container = document.querySelector('.portal-showcase');
+			if (!this.container) return;
+
+			this.buttons = this.container.querySelectorAll('.showcase-nav-btn');
+			this.panels = this.container.querySelectorAll('.showcase-panel');
+
+			this.buttons.forEach(btn => {
+				btn.addEventListener('click', () => {
+					const targetId = btn.getAttribute('data-showcase');
+					if (targetId) this.switchShowcase(targetId, btn);
+				});
+			});
+		}
+
+		switchShowcase(targetId: string, clickedBtn: HTMLButtonElement) {
+			this.buttons?.forEach(btn => btn.classList.remove('active'));
+			this.panels?.forEach(panel => panel.classList.remove('active'));
+
+			clickedBtn.classList.add('active');
+			const targetPanel = document.getElementById(targetId);
+			targetPanel?.classList.add('active');
+		}
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		new PortalShowcase();
+	});
+</script>

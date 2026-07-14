@@ -1,0 +1,438 @@
+---
+---
+<section class="hero" id="hero">
+	<div class="container hero-grid">
+		<div class="hero-content">
+			<div class="badge-new">
+				<span class="badge-glow"></span>
+				<span class="badge-text">Announcing Musubi v3.0</span>
+			</div>
+			
+			<h1 class="hero-title">
+				The Asset-Light <span class="text-gradient-cyan-purple">Industrial Logistics</span> Orchestrator
+			</h1>
+			
+			<p class="hero-lead">
+				We connect Japanese industrial manufacturers with a bid-driven network of US warehouses, carriers, and regional distributors — without owning a single truck or warehouse. Complete control, zero capital expenditure.
+			</p>
+			
+			<div class="hero-actions">
+				<a href="#demo" class="btn btn-primary btn-lg">Request Platform Demo</a>
+				<a href="#bidding-sim" class="btn btn-secondary btn-lg">Watch Live Bidding</a>
+			</div>
+			
+			<div class="hero-stats">
+				<div class="stat-item">
+					<span class="stat-number">$10K-$50K</span>
+					<span class="stat-label">Average Order Value</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number">8-15%</span>
+					<span class="stat-label">Captured Broker Spread</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number">100%</span>
+					<span class="stat-label">Asset-Light Software Margins</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="hero-visual">
+			<div class="visual-container glass-card">
+				<div class="visual-header">
+					<div class="window-dots">
+						<span class="dot-red"></span>
+						<span class="dot-yellow"></span>
+						<span class="dot-green"></span>
+					</div>
+					<div class="window-title">Japan → US Logistics Corridor</div>
+					<div class="window-status">
+						<span class="status-indicator-green"></span> Live Monitor
+					</div>
+				</div>
+				
+				<div class="corridor-map">
+					<!-- Interactive SVG Corridor Map -->
+					<svg viewBox="0 0 500 320" class="map-svg" xmlns="http://www.w3.org/2000/svg">
+						<!-- Grid pattern background -->
+						<defs>
+							<pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+								<path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1"/>
+							</pattern>
+							<linearGradient id="gradient-line" x1="0%" y1="0%" x2="100%" y2="0%">
+								<stop offset="0%" stop-color="#00f2fe" stop-opacity="0.2"/>
+								<stop offset="50%" stop-color="#00f2fe" stop-opacity="1"/>
+								<stop offset="100%" stop-color="#8b5cf6" stop-opacity="1"/>
+							</linearGradient>
+							
+							<!-- Glowing drop shadow filter -->
+							<filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+								<feGaussianBlur stdDeviation="3" result="blur" />
+								<feComposite in="SourceGraphic" in2="blur" operator="over" />
+							</filter>
+						</defs>
+						<rect width="100%" height="100%" fill="url(#grid)" />
+						
+						<!-- Route Connecting Paths -->
+						<path d="M 60 160 Q 150 70 230 160 T 400 160" fill="none" stroke="url(#gradient-line)" stroke-dasharray="6,4" stroke-width="2" class="route-line-animation" filter="url(#glow)" />
+						<path d="M 230 160 L 310 240 L 400 160" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1.5" />
+						
+						<!-- Cargo Animation Dots -->
+						<circle r="4" fill="#00f2fe" class="cargo-dot cargo-dot-1" filter="url(#glow)">
+							<animateMotion dur="6s" repeatCount="indefinite" path="M 60 160 Q 150 70 230 160 T 400 160" />
+						</circle>
+						<circle r="4" fill="#8b5cf6" class="cargo-dot cargo-dot-2" filter="url(#glow)">
+							<animateMotion dur="6s" begin="2s" repeatCount="indefinite" path="M 60 160 Q 150 70 230 160 T 400 160" />
+						</circle>
+						
+						<!-- Corridor Nodes -->
+						<!-- Node 1: JP Supplier (Nagoya) -->
+						<g class="map-node" transform="translate(60, 160)">
+							<circle r="16" fill="rgba(0, 242, 254, 0.1)" stroke="#00f2fe" stroke-width="1.5" />
+							<circle r="6" fill="#00f2fe" filter="url(#glow)" />
+							<text y="-24" text-anchor="middle" fill="#f3f4f6" font-size="10" font-weight="600">JP Supplier</text>
+							<text y="-12" text-anchor="middle" fill="#9ca3af" font-size="8">Nagoya (Factory)</text>
+						</g>
+						
+						<!-- Node 2: Port of LA (Drayage) -->
+						<g class="map-node" transform="translate(230, 160)">
+							<circle r="16" fill="rgba(59, 130, 246, 0.1)" stroke="#3b82f6" stroke-width="1.5" />
+							<circle r="6" fill="#3b82f6" filter="url(#glow)" />
+							<text y="-24" text-anchor="middle" fill="#f3f4f6" font-size="10" font-weight="600">Port of LA</text>
+							<text y="-12" text-anchor="middle" fill="#9ca3af" font-size="8">Drayage Leg</text>
+						</g>
+						
+						<!-- Node 3: 3PL Hub (Warehouse) -->
+						<g class="map-node" transform="translate(310, 240)">
+							<circle r="16" fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="1.5" />
+							<circle r="6" fill="#10b981" filter="url(#glow)" />
+							<text y="24" text-anchor="middle" fill="#f3f4f6" font-size="10" font-weight="600">3PL Warehouse</text>
+							<text y="36" text-anchor="middle" fill="#9ca3af" font-size="8">Carson, CA (Storage)</text>
+						</g>
+						
+						<!-- Node 4: US Distributor -->
+						<g class="map-node" transform="translate(400, 160)">
+							<circle r="16" fill="rgba(139, 92, 246, 0.1)" stroke="#8b5cf6" stroke-width="1.5" />
+							<circle r="6" fill="#8b5cf6" filter="url(#glow)" />
+							<text y="-24" text-anchor="middle" fill="#f3f4f6" font-size="10" font-weight="600">Distributor</text>
+							<text y="-12" text-anchor="middle" fill="#9ca3af" font-size="8">Detroit (Final Mile)</text>
+						</g>
+					</svg>
+				</div>
+				
+				<div class="visual-details">
+					<div class="detail-row">
+						<span class="detail-label">Current Transit:</span>
+						<span class="detail-val font-mono">PKG-2026-0814</span>
+					</div>
+					<div class="detail-row">
+						<span class="detail-label">Ocean Leg Status:</span>
+						<span class="detail-val val-green">In-Transit (GPS Active)</span>
+					</div>
+					<div class="detail-row">
+						<span class="detail-label">Required Certs:</span>
+						<span class="detail-val val-badge">Customs Bonded</span>
+						<span class="detail-val val-badge">TSCA Certified</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.hero {
+		position: relative;
+		padding-top: 160px;
+		padding-bottom: 120px;
+		overflow: hidden;
+	}
+
+	.hero-grid {
+		display: grid;
+		grid-template-columns: 1.1fr 0.9fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.hero-content {
+		z-index: 10;
+	}
+
+	.badge-new {
+		display: inline-flex;
+		align-items: center;
+		padding: 6px 16px;
+		background: rgba(0, 242, 254, 0.05);
+		border: 1px solid rgba(0, 242, 254, 0.2);
+		border-radius: 9999px;
+		margin-bottom: 24px;
+		position: relative;
+	}
+
+	.badge-glow {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: var(--accent-primary);
+		box-shadow: 0 0 8px var(--accent-primary);
+		margin-right: 8px;
+		display: inline-block;
+	}
+
+	.badge-text {
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--accent-primary);
+		letter-spacing: 0.02em;
+	}
+
+	.hero-title {
+		font-size: 3.5rem;
+		font-weight: 800;
+		line-height: 1.15;
+		margin-bottom: 24px;
+		letter-spacing: -0.03em;
+	}
+
+	.hero-lead {
+		font-size: 1.15rem;
+		line-height: 1.7;
+		color: var(--text-secondary);
+		margin-bottom: 36px;
+		max-width: 580px;
+	}
+
+	.hero-actions {
+		display: flex;
+		gap: 16px;
+		margin-bottom: 48px;
+	}
+
+	.btn-lg {
+		padding: 14px 28px;
+		font-size: 1.05rem;
+	}
+
+	.hero-stats {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+		border-top: 1px solid var(--card-border);
+		padding-top: 32px;
+	}
+
+	.stat-item {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	.stat-number {
+		font-family: var(--font-heading);
+		font-size: 1.8rem;
+		font-weight: 800;
+		color: var(--text-primary);
+		background: linear-gradient(135deg, #ffffff 0%, var(--text-secondary) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.stat-label {
+		font-size: 0.8rem;
+		color: var(--text-muted);
+		text-transform: uppercase;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+	}
+
+	/* Hero Visual Card styling */
+	.hero-visual {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+
+	.hero-visual::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 80%;
+		height: 80%;
+		background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 60%);
+		filter: blur(40px);
+		z-index: -1;
+	}
+
+	.visual-container {
+		width: 100%;
+		max-width: 480px;
+		overflow: hidden;
+		border-radius: 16px;
+	}
+
+	.visual-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 12px 18px;
+		border-bottom: 1px solid var(--card-border);
+		background: rgba(255, 255, 255, 0.02);
+	}
+
+	.window-dots {
+		display: flex;
+		gap: 6px;
+	}
+
+	.window-dots span {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		display: inline-block;
+	}
+
+	.dot-red { background-color: #ff5f56; }
+	.dot-yellow { background-color: #ffbd2e; }
+	.dot-green { background-color: #27c93f; }
+
+	.window-title {
+		font-size: 0.8rem;
+		color: var(--text-secondary);
+		font-weight: 500;
+	}
+
+	.window-status {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		font-size: 0.75rem;
+		color: var(--text-muted);
+		font-weight: 600;
+	}
+
+	.status-indicator-green {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: var(--accent-success);
+		box-shadow: 0 0 8px var(--accent-success);
+		display: inline-block;
+	}
+
+	.corridor-map {
+		padding: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.map-svg {
+		width: 100%;
+		height: auto;
+	}
+
+	/* Map Animations */
+	.route-line-animation {
+		stroke-dasharray: 8, 6;
+		animation: dash 35s linear infinite;
+	}
+
+	@keyframes dash {
+		to {
+			stroke-dashoffset: -1000;
+		}
+	}
+
+	.map-node {
+		transition: transform 0.3s ease;
+	}
+
+	.map-node:hover {
+		transform: scale(1.15);
+		cursor: pointer;
+	}
+
+	.visual-details {
+		padding: 16px 20px;
+		background: rgba(255, 255, 255, 0.01);
+		border-top: 1px solid var(--card-border);
+		font-size: 0.85rem;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.detail-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.detail-label {
+		color: var(--text-muted);
+	}
+
+	.detail-val {
+		color: var(--text-primary);
+		font-weight: 500;
+	}
+
+	.font-mono {
+		font-family: monospace;
+	}
+
+	.val-green {
+		color: var(--accent-success);
+	}
+
+	.val-badge {
+		background: rgba(255, 255, 255, 0.05);
+		padding: 2px 8px;
+		border-radius: 4px;
+		font-size: 0.75rem;
+		color: var(--accent-primary);
+		border: 1px solid rgba(0, 242, 254, 0.1);
+	}
+
+	@media (max-width: 991px) {
+		.hero-grid {
+			grid-template-columns: 1fr;
+			gap: 48px;
+			text-align: center;
+		}
+		
+		.hero-lead {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.hero-actions {
+			justify-content: center;
+		}
+
+		.hero-stats {
+			max-width: 500px;
+			margin: 0 auto;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hero-title {
+			font-size: 2.5rem;
+		}
+
+		.hero-actions {
+			flex-direction: column;
+			gap: 12px;
+		}
+
+		.hero-stats {
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
+	}
+</style>

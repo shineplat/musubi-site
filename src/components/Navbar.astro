@@ -1,0 +1,219 @@
+---
+---
+<nav class="navbar" id="navbar">
+	<div class="nav-container">
+		<a href="#" class="logo">
+			<span>Musu</span><span class="logo-accent">bi</span>
+			<span class="logo-dot"></span>
+		</a>
+		
+		<button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</button>
+		
+		<div class="nav-menu" id="nav-menu">
+			<a href="#features" class="nav-link">Features</a>
+			<a href="#bidding-sim" class="nav-link">Bidding Simulator</a>
+			<a href="#partners" class="nav-link">Ecosystem</a>
+			<a href="#factoring-calc" class="nav-link">FinTech</a>
+			<a href="#investors" class="nav-link">Investors</a>
+			<a href="#demo" class="btn btn-primary nav-cta">Request Demo</a>
+		</div>
+	</div>
+</nav>
+
+<style>
+	.navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 100;
+		padding: 20px 0;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		border-bottom: 1px solid transparent;
+	}
+
+	.navbar.scrolled {
+		background: rgba(8, 11, 17, 0.75);
+		backdrop-filter: blur(16px);
+		-webkit-backdrop-filter: blur(16px);
+		padding: 14px 0;
+		border-color: var(--card-border);
+	}
+
+	.nav-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 24px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo {
+		font-family: var(--font-heading);
+		font-size: 1.6rem;
+		font-weight: 800;
+		color: var(--text-primary);
+		text-decoration: none;
+		letter-spacing: -0.03em;
+		display: flex;
+		align-items: center;
+		gap: 2px;
+	}
+
+	.logo-accent {
+		background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-blue) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.logo-dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: var(--accent-primary);
+		box-shadow: 0 0 10px var(--accent-primary);
+		display: inline-block;
+		margin-left: 2px;
+	}
+
+	.nav-menu {
+		display: flex;
+		align-items: center;
+		gap: 32px;
+	}
+
+	.nav-link {
+		color: var(--text-secondary);
+		text-decoration: none;
+		font-size: 0.95rem;
+		font-weight: 500;
+		transition: all 0.2s ease;
+		position: relative;
+		padding: 4px 0;
+	}
+
+	.nav-link:hover {
+		color: var(--text-primary);
+	}
+
+	.nav-link::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: linear-gradient(90deg, var(--accent-primary), var(--accent-blue));
+		transition: width 0.2s ease;
+	}
+
+	.nav-link:hover::after {
+		width: 100%;
+	}
+
+	.nav-cta {
+		padding: 10px 20px;
+		font-size: 0.9rem;
+	}
+
+	.menu-toggle {
+		display: none;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 26px;
+		height: 18px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+	}
+
+	.bar {
+		width: 100%;
+		height: 2px;
+		background-color: var(--text-primary);
+		transition: all 0.3s ease;
+		border-radius: 1px;
+	}
+
+	@media (max-width: 768px) {
+		.menu-toggle {
+			display: flex;
+		}
+
+		.nav-menu {
+			position: fixed;
+			top: -100vh;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			background: var(--bg-primary);
+			flex-direction: column;
+			justify-content: center;
+			gap: 36px;
+			transition: top 0.4s ease;
+			z-index: 99;
+			padding-bottom: 80px;
+		}
+
+		.nav-menu.active {
+			top: 0;
+		}
+
+		.nav-link {
+			font-size: 1.25rem;
+		}
+
+		.nav-cta {
+			padding: 12px 30px;
+			font-size: 1.05rem;
+		}
+
+		/* Hamburger Animation */
+		.menu-toggle.active .bar:nth-child(1) {
+			transform: translateY(8px) rotate(45deg);
+		}
+		.menu-toggle.active .bar:nth-child(2) {
+			opacity: 0;
+		}
+		.menu-toggle.active .bar:nth-child(3) {
+			transform: translateY(-8px) rotate(-45deg);
+		}
+	}
+</style>
+
+<script>
+	const navbar = document.getElementById('navbar');
+	const menuToggle = document.getElementById('menu-toggle');
+	const navMenu = document.getElementById('nav-menu');
+	const navLinks = document.querySelectorAll('.nav-link, .nav-cta');
+
+	// Header Scroll effect
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 50) {
+			navbar?.classList.add('scrolled');
+		} else {
+			navbar?.classList.remove('scrolled');
+		}
+	});
+
+	// Mobile menu toggle
+	menuToggle?.addEventListener('click', () => {
+		menuToggle.classList.toggle('active');
+		navMenu?.classList.toggle('active');
+		document.body.classList.toggle('no-scroll');
+	});
+
+	// Close menu when clicking link
+	navLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			menuToggle?.classList.remove('active');
+			navMenu?.classList.remove('active');
+			document.body.classList.remove('no-scroll');
+		});
+	});
+</script>
