@@ -3,10 +3,10 @@
 <section class="contact-section" id="demo">
 	<div class="container">
 		<div class="section-title-container">
-			<span class="section-subtitle">Request Access & Info</span>
-			<h2 class="section-title">Join the Musubi Network</h2>
-			<p class="section-desc">
-				Whether you are an exporter seeking capacity, a logistics provider offering space, or an investor tracking high-margin SaaS flywheels, we want to hear from you.
+			<span class="section-subtitle" data-i18n="contact.subtitle">Get in Touch</span>
+			<h2 class="section-title" data-i18n="contact.title">Connect with Our Logistics Team</h2>
+			<p class="section-desc" data-i18n="contact.desc">
+				Whether you are an exporter seeking corridor visibility, a 3PL warehouse or carrier coordinating space, or an importer streamlining distribution, we're here to help.
 			</p>
 		</div>
 		
@@ -14,35 +14,35 @@
 			<!-- Contact Pitch Card -->
 			<div class="pitch-card-container">
 				<div class="glass-card info-pitch-card">
-					<h3>Next Steps for Growth</h3>
-					<p class="pitch-card-lead">We are currently onboarding tier-1 suppliers in Japan and expanding our Carson warehouse corridor.</p>
+					<h3 data-i18n="contact.pitchTitle">Customer Discovery & Feedback</h3>
+					<p class="pitch-card-lead" data-i18n="contact.pitchLead">We are in early exploratory talks with precision parts manufacturers, 3PL warehouses, and distributors to design a platform grounded in real logistics workflows.</p>
 					
 					<div class="info-list">
 						<div class="info-item">
 							<span class="info-icon">📍</span>
 							<div class="info-text">
-								<strong>USA Office</strong>
+								<strong data-i18n="contact.officeUS">USA Operations</strong>
 								<span>Carson Corridor Logistics Hub, Carson, CA</span>
 							</div>
 						</div>
 						<div class="info-item">
 							<span class="info-icon">📍</span>
 							<div class="info-text">
-								<strong>Japan Office</strong>
+								<strong data-i18n="contact.officeJP">Japan Liaison</strong>
 								<span>Naka-ku, Nagoya, Aichi Prefecture</span>
 							</div>
 						</div>
 						<div class="info-item">
 							<span class="info-icon">✉</span>
 							<div class="info-text">
-								<strong>General Inquiries</strong>
+								<strong data-i18n="contact.officeInq">Logistics Inquiries</strong>
 								<span>operations@musubi.com</span>
 							</div>
 						</div>
 					</div>
 					
 					<div class="pitch-tag-glow">
-						<span>⚡ Seed Round v3 Ongoing • Pitch Deck Available on Request</span>
+						<span data-i18n="contact.tagGlow">💡 Early Concept Stage • Exploring Pilot Partners & Workflow Input</span>
 					</div>
 				</div>
 			</div>
@@ -52,9 +52,9 @@
 				<div class="glass-card form-card">
 					<!-- Form Tab Swappers -->
 					<div class="form-tabs">
-						<button class="form-tab-btn active" data-form-role="exporter">Manufacturer</button>
-						<button class="form-tab-btn" data-form-role="partner">Logistics Partner</button>
-						<button class="form-tab-btn" data-form-role="investor">Investor</button>
+						<button class="form-tab-btn active" data-form-role="exporter" data-i18n="contact.tabExp">Manufacturer</button>
+						<button class="form-tab-btn" data-form-role="partner" data-i18n="contact.tabLog">3PL & Carrier</button>
+						<button class="form-tab-btn" data-form-role="distributor" data-i18n="contact.tabDist">Distributor / Importer</button>
 					</div>
 					
 					<!-- Form Fields Box -->
@@ -63,44 +63,44 @@
 						
 						<div class="form-group-row">
 							<div class="form-group">
-								<label for="company-name" id="label-company">Company Name</label>
+								<label for="company-name" id="label-company" data-i18n="contact.labelCompany">Company Name</label>
 								<input type="text" id="company-name" placeholder="Nakamura Seiki Ltd." required />
 							</div>
 							<div class="form-group">
-								<label for="contact-name">Contact Name</label>
+								<label for="contact-name" data-i18n="contact.labelContact">Contact Name</label>
 								<input type="text" id="contact-name" placeholder="Taro Nakamura" required />
 							</div>
 						</div>
 						
 						<div class="form-group">
-							<label for="contact-email">Email Address</label>
+							<label for="contact-email" data-i18n="contact.labelEmail">Email Address</label>
 							<input type="email" id="contact-email" placeholder="contact@company.com" required />
 						</div>
 						
 						<!-- Dynamic Field Block 1 -->
 						<div class="form-group" id="dynamic-field-container">
-							<label for="dynamic-select" id="label-dynamic">Estimated Monthly Volume</label>
+							<label for="dynamic-select" id="label-dynamic" data-i18n="contact.labelVolume">Estimated Monthly Volume</label>
 							<select id="dynamic-select">
-								<option value="low">Under 10 containers / month</option>
-								<option value="medium">10 to 50 containers / month</option>
-								<option value="high">50+ containers / month</option>
+								<option value="low">Under 5 containers / month</option>
+								<option value="medium">5 to 20 containers / month</option>
+								<option value="high">20+ containers / month</option>
 							</select>
 						</div>
 						
 						<div class="form-group">
-							<label for="message">Message / Specific Requirements</label>
+							<label for="message" data-i18n="contact.labelMsg">Message / Specific Requirements</label>
 							<textarea id="message" rows="4" placeholder="How can we help optimize your supply chain corridor?" required></textarea>
 						</div>
 						
-						<button type="submit" class="btn btn-primary form-submit-btn">Send Inquiry</button>
+						<button type="submit" class="btn btn-primary form-submit-btn" data-i18n="contact.btnSubmit">Send Message / Schedule a Chat</button>
 					</form>
 					
 					<!-- Success Message Panel -->
 					<div class="success-panel hidden" id="success-panel">
 						<div class="success-icon">✓</div>
-						<h3>Inquiry Submitted Successfully</h3>
-						<p>Thank you for reaching out. A Musubi representative will contact you within 24 hours to discuss next steps.</p>
-						<button class="btn btn-secondary btn-sm" id="reset-form-btn">Submit Another Inquiry</button>
+						<h3 data-i18n="contact.successTitle">Message Received</h3>
+						<p data-i18n="contact.successDesc">Thank you for reaching out. We look forward to connecting and discussing your supply chain workflows.</p>
+						<button class="btn btn-secondary btn-sm" id="reset-form-btn" data-i18n="contact.btnReset">Submit Another Message</button>
 					</div>
 				</div>
 			</div>
@@ -377,49 +377,101 @@
 		dynamicSelect: HTMLSelectElement | null = null;
 		dynamicFieldContainer: HTMLElement | null = null;
 
-		// Form role settings config
+		activeRole: 'exporter' | 'partner' | 'distributor' = 'exporter';
+		currentLang: 'en' | 'ja' = 'en';
+
+		// Bilingual Form role settings config
 		roleConfig = {
-			exporter: {
-				labelCompany: "Company Name",
-				companyPlaceholder: "Nakamura Seiki Ltd.",
-				contactPlaceholder: "Taro Nakamura",
-				msgPlaceholder: "How can we help optimize your supply chain corridor?",
-				dynamicLabel: "Estimated Monthly Volume",
-				dynamicOptions: [
-					{ val: "low", text: "Under 10 containers / month" },
-					{ val: "medium", text: "10 to 50 containers / month" },
-					{ val: "high", text: "50+ containers / month" }
-				]
+			en: {
+				exporter: {
+					labelCompany: "Company / Manufacturer Name",
+					companyPlaceholder: "Nakamura Seiki Ltd.",
+					contactPlaceholder: "Taro Nakamura",
+					msgPlaceholder: "Tell us about your export cargo, parts specifications, or customs needs...",
+					dynamicLabel: "Estimated Monthly Shipping Volume",
+					dynamicOptions: [
+						{ val: "low", text: "Under 5 containers / month" },
+						{ val: "medium", text: "5 to 20 containers / month" },
+						{ val: "high", text: "20+ containers / month" }
+					]
+				},
+				partner: {
+					labelCompany: "3PL or Carrier Organization",
+					companyPlaceholder: "Pacific Logistics Hub Inc.",
+					contactPlaceholder: "Sarah Jenkins",
+					msgPlaceholder: "Provide details on your warehouse space, drayage fleet, or preferred lanes...",
+					dynamicLabel: "Logistics Partner Type",
+					dynamicOptions: [
+						{ val: "warehouse", text: "3PL Warehouse Operator" },
+						{ val: "carrier-drayage", text: "Bonded Port Drayage Carrier" },
+						{ val: "carrier-ltl", text: "FTL/LTL Regional Carrier" }
+					]
+				},
+				distributor: {
+					labelCompany: "Distributor / Importer Name",
+					companyPlaceholder: "Precision Auto Supply LLC",
+					contactPlaceholder: "David Miller",
+					msgPlaceholder: "Which industrial products do you distribute? What regional hubs do you need?",
+					dynamicLabel: "Primary US Distribution Corridor",
+					dynamicOptions: [
+						{ val: "west", text: "West Coast (California Corridor)" },
+						{ val: "midwest", text: "Midwest (Detroit / Chicago Corridor)" },
+						{ val: "national", text: "Multi-Regional / Nationwide" }
+					]
+				}
 			},
-			partner: {
-				labelCompany: "Organization Name",
-				companyPlaceholder: "Pacific Logistics Hub Inc.",
-				contactPlaceholder: "Sarah Jenkins",
-				msgPlaceholder: "Provide details on your facility (location, size) or fleet size...",
-				dynamicLabel: "Ecosystem Partner Type",
-				dynamicOptions: [
-					{ val: "warehouse", text: "3PL Warehouse Operator" },
-					{ val: "carrier-drayage", text: "Bonded Drayage Carrier" },
-					{ val: "carrier-ltl", text: "FTL/LTL Carrier" }
-				]
-			},
-			investor: {
-				labelCompany: "Investment Group / Firm",
-				companyPlaceholder: "Apex Ventures",
-				contactPlaceholder: "Arthur Dent",
-				msgPlaceholder: "How can we support your due diligence? Request Pitch Deck, Financial Models...",
-				dynamicLabel: "Inquiry Area",
-				dynamicOptions: [
-					{ val: "pitch", text: "Request Seed Pitch Deck" },
-					{ val: "financials", text: "Request Financial Model" },
-					{ val: "call", text: "Schedule Introductory Call" }
-				]
+			ja: {
+				exporter: {
+					labelCompany: "貴社名・製造業名",
+					companyPlaceholder: "例：中村精機株式会社",
+					contactPlaceholder: "例：中村 太郎",
+					msgPlaceholder: "輸出品目、部品仕様、通関書類の現状課題などをご記入ください...",
+					dynamicLabel: "想定月間出荷量",
+					dynamicOptions: [
+						{ val: "low", text: "月5コンテナ未満" },
+						{ val: "medium", text: "月5〜20コンテナ" },
+						{ val: "high", text: "月20コンテナ以上" }
+					]
+				},
+				partner: {
+					labelCompany: "3PL倉庫・物流会社名",
+					companyPlaceholder: "例：パシフィック・ロジスティクス株式会社",
+					contactPlaceholder: "例：佐藤 健",
+					msgPlaceholder: "倉庫スペース、保有車両、対応可能な輸送区間についてお聞かせください...",
+					dynamicLabel: "物流パートナーの種別",
+					dynamicOptions: [
+						{ val: "warehouse", text: "3PL倉庫事業者" },
+						{ val: "carrier-drayage", text: "保税港湾ドレージ運送業者" },
+						{ val: "carrier-ltl", text: "FTL/LTL 地域運送会社" }
+					]
+				},
+				distributor: {
+					labelCompany: "販売先・輸入者名",
+					companyPlaceholder: "例：プレシジョン・オートサプライLLC",
+					contactPlaceholder: "例：鈴木 一郎",
+					msgPlaceholder: "取り扱い工業製品や、希望する米国内拠点エリアについてお聞かせください...",
+					dynamicLabel: "主に対象とする米国内エリア",
+					dynamicOptions: [
+						{ val: "west", text: "西海岸（カリフォルニア周辺）" },
+						{ val: "midwest", text: "中西部（デトロイト / シカゴ周辺）" },
+						{ val: "national", text: "全米 / 複数地域" }
+					]
+				}
 			}
 		};
 
 		constructor() {
 			this.container = document.querySelector('.contact-section');
 			if (!this.container) return;
+
+			const params = new URLSearchParams(window.location.search);
+			const paramLang = params.get('lang');
+			const storedLang = typeof localStorage !== 'undefined' ? localStorage.getItem('musubi_lang') : null;
+			this.currentLang = (paramLang === 'ja' || paramLang === 'en')
+				? paramLang
+				: (storedLang === 'ja' || storedLang === 'en')
+					? storedLang
+					: ((document.documentElement.lang as 'en' | 'ja') || 'en');
 
 			this.tabButtons = this.container.querySelectorAll('.form-tab-btn');
 			this.form = document.getElementById('contact-form') as HTMLFormElement;
@@ -438,10 +490,21 @@
 
 			this.tabButtons.forEach(btn => {
 				btn.addEventListener('click', () => {
-					const role = btn.getAttribute('data-form-role') as 'exporter' | 'partner' | 'investor';
-					if (role) this.switchFormRole(role, btn);
+					const role = btn.getAttribute('data-form-role') as 'exporter' | 'partner' | 'distributor';
+					if (role) {
+						this.activeRole = role;
+						this.switchFormRole(role, btn);
+					}
 				});
 			});
+
+			window.addEventListener('musubi:languageChange', ((e: CustomEvent<{ lang: 'en' | 'ja' }>) => {
+				this.currentLang = e.detail?.lang || 'en';
+				const activeBtn = Array.from(this.tabButtons || []).find(
+					b => b.getAttribute('data-form-role') === this.activeRole
+				);
+				this.switchFormRole(this.activeRole, activeBtn || null);
+			}) as EventListener);
 
 			this.form?.addEventListener('submit', (e) => {
 				e.preventDefault();
@@ -449,15 +512,20 @@
 			});
 
 			this.resetBtn?.addEventListener('click', () => this.resetForm());
+
+			this.switchFormRole(this.activeRole, null);
 		}
 
-		switchFormRole(role: 'exporter' | 'partner' | 'investor', clickedBtn: HTMLButtonElement) {
-			this.tabButtons?.forEach(btn => btn.classList.remove('active'));
-			clickedBtn.classList.add('active');
+		switchFormRole(role: 'exporter' | 'partner' | 'distributor', clickedBtn: HTMLButtonElement | null) {
+			if (clickedBtn) {
+				this.tabButtons?.forEach(btn => btn.classList.remove('active'));
+				clickedBtn.classList.add('active');
+			}
 
 			if (this.roleInput) this.roleInput.value = role;
 
-			const config = this.roleConfig[role];
+			const langConfig = this.roleConfig[this.currentLang] || this.roleConfig['en'];
+			const config = langConfig[role];
 			if (!config) return;
 
 			// Update Labels and Placeholders
@@ -469,11 +537,13 @@
 			// Update Dynamic Dropdown Options
 			if (this.labelDynamic) this.labelDynamic.textContent = config.dynamicLabel;
 			if (this.dynamicSelect) {
+				const currentVal = this.dynamicSelect.value;
 				this.dynamicSelect.innerHTML = '';
 				config.dynamicOptions.forEach(opt => {
 					const optionEl = document.createElement('option');
 					optionEl.value = opt.val;
 					optionEl.textContent = opt.text;
+					if (opt.val === currentVal) optionEl.selected = true;
 					this.dynamicSelect?.appendChild(optionEl);
 				});
 			}

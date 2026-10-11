@@ -1,46 +1,24 @@
-# Astro Starter Kit: Basics
+# Musubi — Digital 3PL & Logistics Optimization Platform
+
+A streamlined landing site and interactive product showcase for **Musubi**, focusing on practical, actionable digital 3PL logistics, trade corridor management, and supply chain optimization between Japan and the USA.
+
+## Core Pillars
+
+1. **Logistics Information Visibility**: End-to-end corridor tracking (Japan Factory → Ocean/Port → 3PL Warehouse → Final Mile).
+2. **Streamlined Customs Documentation**: Centralized compliance checklists, bilingual cataloging, and pre-clearance filings (ISF 10+2, EPA TSCA, HTS codes).
+3. **Container & Warehouse Space Allocation**: Interactive 40ft HC container packing simulation and multi-hub inventory allocation (West Coast Carson Hub vs. Midwest Detroit Hub).
+4. **Coordinated 3PL Logistics Operations**: Unified coordination between Japanese manufacturers, 3PL warehouses, drayage carriers, and regional distributors.
+5. **Data Analytics & Reporting**: Lead-time benchmarks, customs clearance speed, container utilization tracking, and demurrage penalty avoidance.
+
+## Development
 
 ```sh
-npm create astro@latest -- --template basics
+# Install dependencies
+npm install
+
+# Start local dev server
+npm run dev
+
+# Build for production
+npm run build
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

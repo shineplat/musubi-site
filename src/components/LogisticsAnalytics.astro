@@ -1,0 +1,537 @@
+---
+---
+<section class="analytics-section" id="analytics">
+	<div class="container">
+		<div class="section-title-container">
+			<span class="section-subtitle" data-i18n="ana.subtitle">Data Analytics Framework</span>
+			<h2 class="section-title" data-i18n="ana.title">Logistics Analytics & Reporting Model</h2>
+			<p class="section-desc" data-i18n="ana.desc">
+				A structured approach to tracking corridor milestones, customs hold times, container space utilization, and regional inventory turnaround.
+			</p>
+		</div>
+		
+		<div class="analytics-grid">
+			<!-- KPI Overview Card -->
+			<div class="analytics-card-container">
+				<div class="glass-card analytics-card">
+					<div class="card-top-row">
+						<h3 class="analytics-card-title" data-i18n="ana.cardTitle">Key Operational Indicators</h3>
+						<div class="category-buttons">
+							<button class="cat-btn active" data-cat="lead-time" data-i18n="ana.catLead">Lead Time</button>
+							<button class="cat-btn" data-cat="customs" data-i18n="ana.catCustoms">Customs</button>
+							<button class="cat-btn" data-cat="capacity" data-i18n="ana.catCapacity">Space & Capacity</button>
+						</div>
+					</div>
+
+					<div class="kpi-metric-grid">
+						<div class="kpi-metric-box">
+							<span class="kpi-label" data-i18n="ana.kpiLeadLabel">Corridor Lead Time</span>
+							<strong class="kpi-value text-cyan" id="kpi-focus-val">Leg-by-Leg Visibility</strong>
+							<span class="kpi-delta text-green" id="kpi-focus-desc">Tracking factory dispatch, ocean transit, and domestic legs</span>
+						</div>
+						
+						<div class="kpi-metric-box">
+							<span class="kpi-label" data-i18n="ana.kpiCustomsLabel">Customs Hold Monitoring</span>
+							<strong class="kpi-value" id="kpi-sub1-val">Pre-Filing Velocity</strong>
+							<span class="kpi-delta text-green" id="kpi-sub1-desc">Measuring ISF 10+2 and EPA TSCA submission lead times</span>
+						</div>
+
+						<div class="kpi-metric-box">
+							<span class="kpi-label" data-i18n="ana.kpiCapacityLabel">Container Space Utilization</span>
+							<strong class="kpi-value text-cyan" id="kpi-sub2-val">Cube & Pallet Yield</strong>
+							<span class="kpi-delta text-green" id="kpi-sub2-desc">Targeting maximum volume efficiency per ocean container</span>
+						</div>
+
+						<div class="kpi-metric-box">
+							<span class="kpi-label" data-i18n="ana.kpiDemurrageLabel">Port Demurrage Risk</span>
+							<strong class="kpi-value text-green" id="kpi-sub3-val">Free-Time Alerts</strong>
+							<span class="kpi-delta text-green" id="kpi-sub3-desc">Proactive tracking of Last Free Day to help avoid penalties</span>
+						</div>
+					</div>
+
+					<!-- Lead-Time Stage Breakdown Bar Chart -->
+					<div class="breakdown-container">
+						<div class="breakdown-header">
+							<span data-i18n="ana.pipelineHeader">Illustrative Japan-US Transit Pipeline</span>
+							<span class="font-mono" data-i18n="ana.pipelineTotal">Typical Corridor: ~18–20 Days</span>
+						</div>
+						<div class="stacked-bar">
+							<div class="bar-segment bar-ocean" style="width: 60%;" title="Ocean Transit: ~12-14 Days">
+								<span data-i18n="ana.barOcean">Ocean (~12–14d)</span>
+							</div>
+							<div class="bar-segment bar-drayage" style="width: 12%;" title="Port Drayage & Customs: ~1-2d">
+								<span data-i18n="ana.barDrayage">Drayage (~1–2d)</span>
+							</div>
+							<div class="bar-segment bar-wh" style="width: 12%;" title="3PL Receiving & Staging: ~1-2d">
+								<span data-i18n="ana.barWh">3PL (~1–2d)</span>
+							</div>
+							<div class="bar-segment bar-final" style="width: 16%;" title="Final Mile Delivery: ~2-3d">
+								<span data-i18n="ana.barFinal">Delivery (~2–3d)</span>
+							</div>
+						</div>
+						<div class="bar-legend">
+							<div class="legend-item"><span class="dot dot-ocean"></span> <span data-i18n="ana.legOcean">Ocean Transit (Nagoya → LA)</span></div>
+							<div class="legend-item"><span class="dot dot-drayage"></span> <span data-i18n="ana.legDrayage">Port Customs & Drayage</span></div>
+							<div class="legend-item"><span class="dot dot-wh"></span> <span data-i18n="ana.legWh">3PL Receiving (Carson Hub)</span></div>
+							<div class="legend-item"><span class="dot dot-final"></span> <span data-i18n="ana.legFinal">Regional Final-Mile Delivery</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Reporting Framework Card -->
+			<div class="analytics-card-container">
+				<div class="glass-card analytics-card">
+					<h3 class="analytics-card-title" data-i18n="ana.reportTitle">Planned Intelligence & Reports</h3>
+					
+					<div class="efficiency-insights">
+						<div class="insight-item">
+							<div class="insight-icon">📦</div>
+							<div class="insight-content">
+								<strong data-i18n="ana.report1Title">Container Space Yield Reports</strong>
+								<p data-i18n="ana.report1Desc">Visual reports comparing actual loaded pallets against theoretical container capacity to identify underutilized volume across shipments.</p>
+							</div>
+						</div>
+
+						<div class="insight-item">
+							<div class="insight-icon">📑</div>
+							<div class="insight-content">
+								<strong data-i18n="ana.report2Title">Customs Clearance Timeline Tracking</strong>
+								<p data-i18n="ana.report2Desc">Audit logs recording when ISF 10+2, EPA TSCA disclosures, and arrival notices were submitted relative to port vessel docking.</p>
+							</div>
+						</div>
+
+						<div class="insight-item">
+							<div class="insight-icon">🏭</div>
+							<div class="insight-content">
+								<strong data-i18n="ana.report3Title">Regional Warehouse Dwell Analysis</strong>
+								<p data-i18n="ana.report3Desc">Visibility into inbound staging duration, dock-to-stock turnaround, and inventory turnover across Carson and Midwest 3PL hubs.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="report-export-box">
+						<div class="report-meta">
+							<strong data-i18n="ana.ctaTitle">Customer Discovery & Metric Preferences</strong>
+							<span data-i18n="ana.ctaDesc">What data points and reports would be most valuable for your logistics operations?</span>
+						</div>
+						<a href="#demo" class="btn btn-secondary btn-sm" id="btn-export-report" data-i18n="ana.ctaBtn">Share Your Analytics Needs</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.analytics-section {
+		background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+		border-bottom: 1px solid var(--card-border);
+		position: relative;
+	}
+
+	.analytics-grid {
+		display: grid;
+		grid-template-columns: 1.15fr 0.85fr;
+		gap: 30px;
+		align-items: stretch;
+	}
+
+	.analytics-card {
+		padding: 28px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.card-top-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid var(--card-border);
+		padding-bottom: 14px;
+	}
+
+	.analytics-card-title {
+		font-size: 1.25rem;
+		color: var(--text-primary);
+	}
+
+	.category-buttons {
+		display: flex;
+		gap: 6px;
+		background: rgba(255, 255, 255, 0.02);
+		padding: 4px;
+		border-radius: 8px;
+		border: 1px solid var(--card-border);
+	}
+
+	.cat-btn {
+		background: transparent;
+		border: none;
+		color: var(--text-muted);
+		padding: 4px 10px;
+		border-radius: 6px;
+		font-size: 0.78rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.cat-btn.active {
+		background: var(--bg-tertiary);
+		color: var(--accent-primary);
+	}
+
+	/* KPI Metrics */
+	.kpi-metric-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 16px;
+	}
+
+	.kpi-metric-box {
+		padding: 16px;
+		background: rgba(8, 11, 17, 0.4);
+		border: 1px solid var(--card-border);
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	.kpi-label {
+		font-size: 0.76rem;
+		color: var(--text-muted);
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		font-weight: 600;
+	}
+
+	.kpi-value {
+		font-family: var(--font-heading);
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--text-primary);
+	}
+
+	.kpi-delta {
+		font-size: 0.73rem;
+		font-weight: 400;
+		line-height: 1.3;
+	}
+
+	.text-cyan { color: var(--accent-primary); }
+	.text-green { color: var(--accent-success); }
+
+	/* Stage Breakdown Bar */
+	.breakdown-container {
+		background: rgba(255, 255, 255, 0.01);
+		border: 1px solid var(--card-border);
+		border-radius: 10px;
+		padding: 16px;
+		margin-top: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.breakdown-header {
+		display: flex;
+		justify-content: space-between;
+		font-size: 0.82rem;
+		font-weight: 600;
+		color: var(--text-secondary);
+	}
+
+	.stacked-bar {
+		height: 28px;
+		border-radius: 6px;
+		overflow: hidden;
+		display: flex;
+		background: var(--bg-primary);
+		border: 1px solid var(--card-border);
+	}
+
+	.bar-segment {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.72rem;
+		font-weight: 700;
+		color: #ffffff;
+		transition: width 0.4s ease;
+	}
+
+	.bar-ocean { background: #0284c7; }
+	.bar-drayage { background: #00f2fe; color: #080b11; }
+	.bar-wh { background: #8b5cf6; }
+	.bar-final { background: #10b981; color: #080b11; }
+
+	.bar-legend {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 14px;
+		font-size: 0.75rem;
+		color: var(--text-muted);
+	}
+
+	.legend-item {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+	}
+
+	.dot {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+	}
+
+	.dot-ocean { background: #0284c7; }
+	.dot-drayage { background: #00f2fe; }
+	.dot-wh { background: #8b5cf6; }
+	.dot-final { background: #10b981; }
+
+	/* Efficiency Insights */
+	.efficiency-insights {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		flex-grow: 1;
+	}
+
+	.insight-item {
+		display: flex;
+		gap: 14px;
+		align-items: flex-start;
+		padding: 12px;
+		background: rgba(255, 255, 255, 0.01);
+		border: 1px solid var(--card-border);
+		border-radius: 8px;
+	}
+
+	.insight-icon {
+		font-size: 1.3rem;
+		flex-shrink: 0;
+	}
+
+	.insight-content {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+	}
+
+	.insight-content strong {
+		font-size: 0.88rem;
+		color: var(--text-primary);
+	}
+
+	.insight-content p {
+		font-size: 0.82rem;
+		line-height: 1.4;
+		color: var(--text-secondary);
+	}
+
+	.font-mono {
+		font-family: monospace;
+		font-weight: 700;
+	}
+
+	.report-export-box {
+		margin-top: auto;
+		padding: 14px 16px;
+		background: rgba(0, 242, 254, 0.03);
+		border: 1px dashed rgba(0, 242, 254, 0.2);
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.report-meta {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+	}
+
+	.report-meta strong {
+		font-size: 0.85rem;
+		color: var(--text-primary);
+	}
+
+	.report-meta span {
+		font-size: 0.76rem;
+		color: var(--text-muted);
+	}
+
+	.btn-sm {
+		padding: 8px 16px;
+		font-size: 0.82rem;
+		width: 100%;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	@media (max-width: 991px) {
+		.analytics-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
+
+<script>
+	class LogisticsAnalytics {
+		catButtons: NodeListOf<HTMLButtonElement> | null = null;
+		focusVal: HTMLElement | null = null;
+		focusDesc: HTMLElement | null = null;
+		sub1Val: HTMLElement | null = null;
+		sub1Desc: HTMLElement | null = null;
+		sub2Val: HTMLElement | null = null;
+		sub2Desc: HTMLElement | null = null;
+		sub3Val: HTMLElement | null = null;
+		sub3Desc: HTMLElement | null = null;
+
+		activeCategory: 'lead-time' | 'customs' | 'capacity' = 'lead-time';
+		currentLang: 'en' | 'ja' = 'en';
+
+		views: Record<'en' | 'ja', Record<'lead-time' | 'customs' | 'capacity', {
+			focus: string;
+			focusDesc: string;
+			sub1: string;
+			sub1Desc: string;
+			sub2: string;
+			sub2Desc: string;
+			sub3: string;
+			sub3Desc: string;
+		}>> = {
+			en: {
+				'lead-time': {
+					focus: 'Leg-by-Leg Visibility',
+					focusDesc: 'Tracking factory dispatch, ocean transit, and domestic legs',
+					sub1: 'Stage Elapsed Time',
+					sub1Desc: 'Identifying bottlenecks between ocean arrival and gate-out',
+					sub2: 'Drayage Turnaround',
+					sub2Desc: 'Monitoring port-to-warehouse transit duration',
+					sub3: 'Final-Mile Tracking',
+					sub3Desc: 'Estimated vs actual delivery times to regional distributors'
+				},
+				'customs': {
+					focus: 'Pre-Filing Velocity',
+					focusDesc: 'Measuring ISF 10+2 and EPA TSCA submission lead times',
+					sub1: 'Compliance Checklists',
+					sub1Desc: 'Ensuring all HTS codes and toxic declarations are verified',
+					sub2: 'Customs Hold Alerts',
+					sub2Desc: 'Immediate notification if any documentation is missing',
+					sub3: 'Clearance Duration',
+					sub3Desc: 'Tracking port customs release time from arrival notice'
+				},
+				'capacity': {
+					focus: 'Cube & Pallet Yield',
+					focusDesc: 'Targeting maximum volume efficiency per ocean container',
+					sub1: 'Void Space Tracking',
+					sub1Desc: 'Measuring unused container cubic meters across shipments',
+					sub2: '3PL Staging Aging',
+					sub2Desc: 'Monitoring pallet dwell days in West Coast and Midwest hubs',
+					sub3: 'Container Balance',
+					sub3Desc: 'Planning container load schedules against warehouse dock availability'
+				}
+			},
+			ja: {
+				'lead-time': {
+					focus: '区間別リードタイムの可視化',
+					focusDesc: '工場出荷、海上輸送、米国内陸輸送の各区間をトラッキング',
+					sub1: '港湾滞留・経過日数',
+					sub1Desc: '本船着岸からゲートアウトまでのボトルネックを特定',
+					sub2: 'ドレージ所要日数',
+					sub2Desc: '港湾から3PL倉庫までの輸送時間を監視',
+					sub3: '最終配送トラッキング',
+					sub3Desc: '地域販売先への納入予定と実績の差異を管理'
+				},
+				'customs': {
+					focus: '事前申告のスピード向上',
+					focusDesc: 'ISF 10+2およびEPA TSCA提出のリードタイム測定',
+					sub1: 'コンプライアンス点検',
+					sub1Desc: 'HSコードおよび化学物質申告の事前照合',
+					sub2: '通関保留アラート',
+					sub2Desc: '不備や追加書類要請が発生した場合の即時通知',
+					sub3: '通関許可所要日数',
+					sub3Desc: 'アライバルノーティス受領から通関許可までの推移'
+				},
+				'capacity': {
+					focus: '容積充填率・パレット効率',
+					focusDesc: 'コンテナ1本当たりの積載容積の最大化',
+					sub1: 'デッドスペース測定',
+					sub1Desc: '出荷実績ごとの未活用容積の推移',
+					sub2: '3PL倉庫ステージング滞留',
+					sub2Desc: '西海岸および中西部拠点での保管日数の監視',
+					sub3: '搬入バランス調整',
+					sub3Desc: '倉庫バース受入枠に応じたコンテナ搬入の平準化'
+				}
+			}
+		};
+
+		constructor() {
+			const container = document.getElementById('analytics');
+			if (!container) return;
+
+			const params = new URLSearchParams(window.location.search);
+			const paramLang = params.get('lang');
+			const storedLang = typeof localStorage !== 'undefined' ? localStorage.getItem('musubi_lang') : null;
+			this.currentLang = (paramLang === 'ja' || paramLang === 'en')
+				? paramLang
+				: (storedLang === 'ja' || storedLang === 'en')
+					? storedLang
+					: ((document.documentElement.lang as 'en' | 'ja') || 'en');
+
+			this.catButtons = container.querySelectorAll('.cat-btn');
+			this.focusVal = document.getElementById('kpi-focus-val');
+			this.focusDesc = document.getElementById('kpi-focus-desc');
+			this.sub1Val = document.getElementById('kpi-sub1-val');
+			this.sub1Desc = document.getElementById('kpi-sub1-desc');
+			this.sub2Val = document.getElementById('kpi-sub2-val');
+			this.sub2Desc = document.getElementById('kpi-sub2-desc');
+			this.sub3Val = document.getElementById('kpi-sub3-val');
+			this.sub3Desc = document.getElementById('kpi-sub3-desc');
+
+			this.catButtons.forEach(btn => {
+				btn.addEventListener('click', () => {
+					this.catButtons?.forEach(b => b.classList.remove('active'));
+					btn.classList.add('active');
+					const catKey = btn.getAttribute('data-cat') as 'lead-time' | 'customs' | 'capacity';
+					if (catKey && this.views[this.currentLang][catKey]) {
+						this.activeCategory = catKey;
+						this.updateCategory(catKey);
+					}
+				});
+			});
+
+			window.addEventListener('musubi:languageChange', ((e: CustomEvent<{ lang: 'en' | 'ja' }>) => {
+				this.currentLang = e.detail?.lang || 'en';
+				this.updateCategory(this.activeCategory);
+			}) as EventListener);
+
+			this.updateCategory(this.activeCategory);
+		}
+
+		updateCategory(key: 'lead-time' | 'customs' | 'capacity') {
+			const langDict = this.views[this.currentLang] || this.views['en'];
+			const item = langDict[key];
+			if (!item) return;
+
+			if (this.focusVal) this.focusVal.textContent = item.focus;
+			if (this.focusDesc) this.focusDesc.textContent = item.focusDesc;
+			if (this.sub1Val) this.sub1Val.textContent = item.sub1;
+			if (this.sub1Desc) this.sub1Desc.textContent = item.sub1Desc;
+			if (this.sub2Val) this.sub2Val.textContent = item.sub2;
+			if (this.sub2Desc) this.sub2Desc.textContent = item.sub2Desc;
+			if (this.sub3Val) this.sub3Val.textContent = item.sub3;
+			if (this.sub3Desc) this.sub3Desc.textContent = item.sub3Desc;
+		}
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		new LogisticsAnalytics();
+	});
+</script>

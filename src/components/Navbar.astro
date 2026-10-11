@@ -7,19 +7,31 @@
 			<span class="logo-dot"></span>
 		</a>
 		
-		<button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
-			<span class="bar"></span>
-			<span class="bar"></span>
-			<span class="bar"></span>
-		</button>
+		<div class="nav-right">
+			<div class="lang-switch-group mobile-lang-switch">
+				<button type="button" class="lang-btn active" data-lang-choice="en" aria-label="Switch to English">EN</button>
+				<span class="lang-sep">|</span>
+				<button type="button" class="lang-btn" data-lang-choice="ja" aria-label="日本語に切り替え">日本語</button>
+			</div>
+			
+			<button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</button>
+		</div>
 		
 		<div class="nav-menu" id="nav-menu">
-			<a href="#features" class="nav-link">Features</a>
-			<a href="#bidding-sim" class="nav-link">Bidding Simulator</a>
-			<a href="#partners" class="nav-link">Ecosystem</a>
-			<a href="#factoring-calc" class="nav-link">FinTech</a>
-			<a href="#investors" class="nav-link">Investors</a>
-			<a href="#demo" class="btn btn-primary nav-cta">Request Demo</a>
+			<a href="#features" class="nav-link" data-i18n="nav.features">Logistics & Docs</a>
+			<a href="#optimization" class="nav-link" data-i18n="nav.optimization">Allocation & Optimization</a>
+			<a href="#coordination" class="nav-link" data-i18n="nav.coordination">3PL Coordination</a>
+			<a href="#analytics" class="nav-link" data-i18n="nav.analytics">Analytics</a>
+			<div class="lang-switch-group desktop-lang-switch">
+				<button type="button" class="lang-btn active" data-lang-choice="en" aria-label="Switch to English">EN</button>
+				<span class="lang-sep">|</span>
+				<button type="button" class="lang-btn" data-lang-choice="ja" aria-label="日本語に切り替え">日本語</button>
+			</div>
+			<a href="#demo" class="btn btn-primary nav-cta" data-i18n="nav.cta">Get in Touch</a>
 		</div>
 	</div>
 </nav>
@@ -116,6 +128,62 @@
 		width: 100%;
 	}
 
+	.nav-right {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.lang-switch-group {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		padding: 4px 10px;
+		background: rgba(255, 255, 255, 0.04);
+		border: 1px solid var(--card-border);
+		border-radius: 9999px;
+		backdrop-filter: blur(8px);
+	}
+
+	.lang-btn {
+		background: transparent;
+		border: none;
+		color: var(--text-muted);
+		font-family: inherit;
+		font-size: 0.82rem;
+		font-weight: 500;
+		cursor: pointer;
+		padding: 2px 4px;
+		border-radius: 4px;
+		transition: all 0.2s ease;
+		line-height: 1;
+	}
+
+	.lang-btn:hover {
+		color: var(--text-primary);
+	}
+
+	.lang-btn.active {
+		color: var(--accent-primary);
+		font-weight: 700;
+		text-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+	}
+
+	.lang-sep {
+		color: var(--text-muted);
+		font-size: 0.75rem;
+		opacity: 0.5;
+		user-select: none;
+	}
+
+	.mobile-lang-switch {
+		display: none;
+	}
+
+	.desktop-lang-switch {
+		display: inline-flex;
+	}
+
 	.nav-cta {
 		padding: 10px 20px;
 		font-size: 0.9rem;
@@ -141,6 +209,14 @@
 	}
 
 	@media (max-width: 768px) {
+		.mobile-lang-switch {
+			display: inline-flex;
+		}
+
+		.desktop-lang-switch {
+			display: none;
+		}
+
 		.menu-toggle {
 			display: flex;
 		}

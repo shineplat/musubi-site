@@ -3,9 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import PortalShowcase from '../components/PortalShowcase.astro';
-import BiddingSimulator from '../components/BiddingSimulator.astro';
+import AllocationOptimizer from '../components/AllocationOptimizer.astro';
 import EcosystemTabs from '../components/EcosystemTabs.astro';
-import FactoringCalculator from '../components/FactoringCalculator.astro';
+import LogisticsAnalytics from '../components/LogisticsAnalytics.astro';
 import ContactForm from '../components/ContactForm.astro';
 ---
 
@@ -14,9 +14,9 @@ import ContactForm from '../components/ContactForm.astro';
 	<main>
 		<Hero />
 		<PortalShowcase />
-		<BiddingSimulator />
+		<AllocationOptimizer />
 		<EcosystemTabs />
-		<FactoringCalculator />
+		<LogisticsAnalytics />
 		<ContactForm />
 	</main>
 	
@@ -24,13 +24,14 @@ import ContactForm from '../components/ContactForm.astro';
 		<div class="container footer-content">
 			<div class="footer-brand">
 				<span>Musu</span><span class="logo-accent">bi</span>
-				<p>The Asset-Light Industrial Logistics Orchestrator.</p>
+				<p data-i18n="footer.tagline">Digital 3PL, Logistics Visibility & Supply Chain Optimization Concept.</p>
 			</div>
 			<div class="footer-links">
-				<a href="#features">Features</a>
-				<a href="#bidding-sim">Bidding</a>
-				<a href="#partners">Ecosystem</a>
-				<a href="#factoring-calc">FinTech</a>
+				<a href="#features" data-i18n="footer.link1">Visibility & Docs</a>
+				<a href="#optimization" data-i18n="footer.link2">Allocation Model</a>
+				<a href="#coordination" data-i18n="footer.link3">3PL Coordination</a>
+				<a href="#analytics" data-i18n="footer.link4">Analytics Model</a>
+				<a href="#demo" data-i18n="footer.link5">Feedback & Chat</a>
 			</div>
 			<div class="footer-copy">
 				&copy; {new Date().getFullYear()} Musubi Inc. All rights reserved.

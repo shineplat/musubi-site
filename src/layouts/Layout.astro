@@ -5,8 +5,8 @@ interface Props {
 }
 
 const { 
-	title = "Musubi — Asset-Light Industrial Logistics Orchestrator", 
-	description = "Connecting Japanese manufacturers with a bid-driven network of US warehouses, carriers, and distributors. Spot procurement, compliance-gated bidding, and custody ledgers."
+	title = "Musubi — Digital 3PL & Logistics Optimization (Platform Concept)", 
+	description = "A platform concept for visualizing logistics information, streamlining customs documentation, modeling warehouse and container allocation, and coordinating 3PL operations."
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
@@ -29,12 +29,13 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 		
 		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
+		<script src="../i18n/i18n.ts"></script>
 	</body>
 </html>
 
@@ -63,8 +64,8 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 		--glow-primary: 0 0 30px rgba(0, 242, 254, 0.15);
 		--glow-secondary: 0 0 30px rgba(139, 92, 246, 0.15);
 		
-		--font-heading: 'Outfit', sans-serif;
-		--font-body: 'Inter', sans-serif;
+		--font-heading: 'Outfit', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+		--font-body: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
 	}
 
 	* {

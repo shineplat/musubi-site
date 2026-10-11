@@ -4,22 +4,22 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 <section class="portal-showcase" id="features">
 	<div class="container">
 		<div class="section-title-container">
-			<span class="section-subtitle">Platform Screenshots</span>
-			<h2 class="section-title">The Musubi Interface</h2>
-			<p class="section-desc">
-				Tailored portals for administrators, exporters, carriers, and warehouses to sync their operations in real-time.
+			<span class="section-subtitle" data-i18n="showcase.subtitle">Platform Concept Interface</span>
+			<h2 class="section-title" data-i18n="showcase.title">Unified Logistics Information Management</h2>
+			<p class="section-desc" data-i18n="showcase.desc">
+				A unified design concept for how exporters, 3PL warehouses, and operations teams can replace scattered emails and paperwork with clear shipment tracking and organized customs filings.
 			</p>
 		</div>
 		
 		<div class="showcase-tabs-container">
 			<div class="showcase-nav">
 				<button class="showcase-nav-btn active" data-showcase="admin-portal">
-					<strong>Control Tower</strong>
-					<span>Platform Admin Portal</span>
+					<strong data-i18n="showcase.tab1Title">Control Tower Concept</strong>
+					<span data-i18n="showcase.tab1Sub">Operations & 3PL Visibility</span>
 				</button>
 				<button class="showcase-nav-btn" data-showcase="supplier-portal">
-					<strong>Supplier Portal</strong>
-					<span>Japanese Exporter View</span>
+					<strong data-i18n="showcase.tab2Title">Documentation Portal Concept</strong>
+					<span data-i18n="showcase.tab2Sub">Bilingual Customs & Catalog View</span>
 				</button>
 			</div>
 			
@@ -28,25 +28,25 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 				<div class="showcase-panel active" id="admin-portal">
 					<div class="showcase-layout">
 						<div class="showcase-image-wrapper glass-card">
-							<img src={`${base}logiplat_dashboard.png`} alt="Musubi Admin Control Tower Dashboard" class="showcase-img" />
+							<img src={`${base}logiplat_dashboard.png`} alt="Musubi Operations Control Tower Dashboard Concept" class="showcase-img" />
 							<div class="glow-effect-box"></div>
 						</div>
 						<div class="showcase-details">
-							<h3>Admin Control Tower</h3>
-							<p>The centralized orchestration deck used by administrators to monitor international logistics legs, manage compliance gates, and resolve disputes.</p>
+							<h3 data-i18n="showcase.p1Title">Operations Control Tower (Concept Design)</h3>
+							<p data-i18n="showcase.p1Desc">The planned interface for logistics operators to monitor international shipping legs, track port dwell status, and coordinate dock schedules.</p>
 							
 							<div class="showcase-feature-list">
 								<div class="showcase-feat-item">
-									<strong>Route Monitor Dashboard</strong>
-									<span>Track shipments along the Japan-US corridor with real-time ETA calculations.</span>
+									<strong data-i18n="showcase.p1Feat1Title">Corridor Milestone Visibility</strong>
+									<span data-i18n="showcase.p1Feat1Desc">Track shipments along the Japan-US corridor with milestone statuses and container locations.</span>
 								</div>
 								<div class="showcase-feat-item">
-									<strong>Demurrage Threat Matrix</strong>
-									<span>Flashing warnings prioritize shipments within 36 hours of their Last Free Day to avoid port penalties.</span>
+									<strong data-i18n="showcase.p1Feat2Title">Container Dwell & Free Time Tracking</strong>
+									<span data-i18n="showcase.p1Feat2Desc">Designed to monitor Port Last Free Days (LFD) and alert teams early to help prevent costly demurrage penalties.</span>
 								</div>
 								<div class="showcase-feat-item">
-									<strong>Dispute Claims Resolution</strong>
-									<span>Freeze carrier payouts and coordinate cargo rerouting when warehouses reject deliveries.</span>
+									<strong data-i18n="showcase.p1Feat3Title">Multi-Party 3PL Coordination</strong>
+									<span data-i18n="showcase.p1Feat3Desc">Support smooth handoffs between ocean carriers, bonded drayage drivers, and warehouse receiving docks.</span>
 								</div>
 							</div>
 						</div>
@@ -57,25 +57,25 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 				<div class="showcase-panel" id="supplier-portal">
 					<div class="showcase-layout">
 						<div class="showcase-image-wrapper glass-card">
-							<img src={`${base}supplier_portal.png`} alt="Musubi Japanese Supplier Portal" class="showcase-img" />
+							<img src={`${base}supplier_portal.png`} alt="Musubi Customs Documentation and Catalog Portal Concept" class="showcase-img" />
 							<div class="glow-effect-box"></div>
 						</div>
 						<div class="showcase-details">
-							<h3>Japanese Supplier Portal</h3>
-							<p>A bilingual entry-point enabling Japanese industrial goods exporters to catalog products, verify EPA/TSCA custom declarations, and request factoring.</p>
+							<h3 data-i18n="showcase.p2Title">Bilingual Customs & Documentation Hub (Concept Design)</h3>
+							<p data-i18n="showcase.p2Desc">Designed to help exporters organize import/export paperwork with bilingual technical cataloging and pre-clearance compliance checklists.</p>
 							
 							<div class="showcase-feature-list">
 								<div class="showcase-feat-item">
-									<strong>Bilingual Cataloging</strong>
-									<span>Dual JP/EN entry for mechanical designs, dimensions, serialization, and HTS classifications.</span>
+									<strong data-i18n="showcase.p2Feat1Title">Bilingual Catalog & Specification Management</strong>
+									<span data-i18n="showcase.p2Feat1Desc">Dual JP/EN entry for technical parts, dimensions, weights, and HTS tariff classifications.</span>
 								</div>
 								<div class="showcase-feat-item">
-									<strong>Compliance Gating</strong>
-									<span>Clear checklist updates for EPA toxic control disclosures and Importer Security Filings (10+2).</span>
+									<strong data-i18n="showcase.p2Feat2Title">Customs Compliance Checklists</strong>
+									<span data-i18n="showcase.p2Feat2Desc">Automate and track Importer Security Filings (ISF 10+2), EPA TSCA declarations, and Customs Bond verification.</span>
 								</div>
 								<div class="showcase-feat-item">
-									<strong>1-Click Factoring Request</strong>
-									<span>Optimize cash-flow by requesting instant payment factoring for Net 30/60/90 invoices.</span>
+									<strong data-i18n="showcase.p2Feat3Title">Streamlined Shipping Documentation</strong>
+									<span data-i18n="showcase.p2Feat3Desc">One-click digital generation of Bills of Lading, Packing Lists, Commercial Invoices, and arrival notices.</span>
 								</div>
 							</div>
 						</div>
